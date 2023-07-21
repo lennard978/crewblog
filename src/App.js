@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
@@ -8,7 +8,7 @@ import About from "./pages/About";
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter basename="/crewblog">
       <Container>
         <Navbar />
         <Routes>
@@ -17,7 +17,7 @@ const App = () => {
           <Route path="/blog" element={<Blog />} />
         </Routes>
       </Container>
-    </Router>
+    </BrowserRouter>
   );
 };
 
